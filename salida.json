@@ -1,0 +1,23 @@
+[
+  {
+    "nombre": "example.com.",
+    "zona": "example.com.",
+    "tipo": "soa",
+    "ttl": 36000,
+    "valor": ""
+  },
+  {
+    "nombre": "",
+    "zona": "",
+    "tipo": "",
+    "ttl": 0,
+    "valor": ""
+  },
+  {
+    "nombre": "",
+    "zona": "",
+    "tipo": "",
+    "ttl": 0,
+    "valor": ""
+  }
+]

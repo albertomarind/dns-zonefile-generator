@@ -1,0 +1,83 @@
+{
+  "$origin": "example.com.",
+  "soa": {
+    "name": "@",
+    "minimum": 86400,
+    "expire": 2592000,
+    "retry": 1800,
+    "refresh": 28800,
+    "serial": 2005081201,
+    "rname": "hostmaster.example.com.",
+    "mname": "ns1.example.com.",
+    "ttl": 36000
+  },
+  "ns": [
+    {
+      "name": "@",
+      "host": "ns1.example.com.",
+      "ttl": 86400
+    },
+    {
+      "name": "@",
+      "host": "mail.example.com.",
+      "ttl": 86400
+    }
+  ],
+  "mx": [
+    {
+      "name": "@",
+      "preference": 20,
+      "host": "mail2.example.com.",
+      "ttl": 86400
+    }
+  ],
+  "a": [
+    {
+      "name": "@",
+      "ip": "192.168.10.10",
+      "ttl": 86400
+    },
+    {
+      "name": "ns1",
+      "ip": "192.168.1.10",
+      "ttl": 86400
+    },
+    {
+      "name": "ns2",
+      "ip": "192.168.1.20",
+      "ttl": 86400
+    },
+    {
+      "name": "mail",
+      "ip": "192.168.2.10",
+      "ttl": 86400
+    },
+    {
+      "name": "mail2",
+      "ip": "192.168.2.20",
+      "ttl": 86400
+    },
+    {
+      "name": "www2",
+      "ip": "192.168.10.20",
+      "ttl": 86400
+    }
+  ],
+  "cname": [
+    {
+      "name": "www",
+      "alias": "example.com.",
+      "ttl": 86400
+    },
+    {
+      "name": "ftp",
+      "alias": "example.com.",
+      "ttl": 86400
+    },
+    {
+      "name": "webmail",
+      "alias": "example.com.",
+      "ttl": 86400
+    }
+  ]
+}
