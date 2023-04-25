@@ -44,7 +44,7 @@ function mapearJson(jsonZonas) {
         arregloSalida.push({
           nombre: registro.name === '@' ? origin : registro.name,
           zona: origin,
-          tipo: key,
+          tipo: key.toUpperCase(),
           ttl: registro.ttl,
           valor: obtenerValor(registro)
         })
@@ -56,7 +56,7 @@ function mapearJson(jsonZonas) {
 
 function obtenerPrimerRegistro(soa, origin) {
   return {
-    nombre: soa.name === '@' ? origin : soa.name, zona: origin, tipo: 'soa', ttl: soa.ttl, valor: obtenerValor(soa)
+    nombre: soa.name === '@' ? origin : soa.name, zona: origin, tipo: 'SOA', ttl: soa.ttl, valor: obtenerValor(soa)
   };
 }
 
