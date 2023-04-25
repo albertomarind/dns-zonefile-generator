@@ -9,12 +9,11 @@ const NOMBRE_ARCHIVO_SALIDA = 'archivo-zonas.csv';
 try {
   let directorio = process.argv[2];
   let archivos = fs.readdirSync(directorio, {withFileTypes: true});
-  console.log(archivos);
   let archivosZonas = archivos.filter(archivo => path.extname(archivo.name) === '.txt')
   let parser = new Parser();
   let csv = '';
   let arregloFinal = archivosZonas.reduce((prev, actual) => {
-    let jsonZonas = leerArchivo(directorio+'/'+actual.name);
+    let jsonZonas = leerArchivo(directorio + '/' + actual.name);
     let arregloJsonMapeado = mapearJson(jsonZonas);
     return [...prev, ...arregloJsonMapeado]
   }, []);
@@ -23,6 +22,7 @@ try {
     fs.unlinkSync('./' + NOMBRE_ARCHIVO_SALIDA);
   }
   fs.appendFileSync('./' + NOMBRE_ARCHIVO_SALIDA, csv);
+  console.log('Archivo creado');
 } catch (err) {
   console.error(err);
 }
